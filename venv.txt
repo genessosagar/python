@@ -62,4 +62,6 @@ What if we want all the packages that are available in our global python then we
 $ python3 -m venv my_project/venv --system-site-packages
 $ source my_project/venv/bin/activate
 $ pip list
-$ 
+
+
+# Add - venv folder to .gitignore - do not commit them to the github
