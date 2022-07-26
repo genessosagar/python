@@ -1,0 +1,65 @@
+* Virtual Environments
+* To have space to install packages that are specific to the project
+* Built in venv module we will be using
+
+In the command line use the following command to create a venv
+$ python3 -m venv <name_of_project_environment>
+
+-- Create a virtual environment --
+$ python3 -m venv project_env
+$ ls
+Observe the directory named project_env
+$ cd project_env
+$ ls
+Observe the files
+$ cd ..
+
+-- Activate the virtual environment --
+$ source project_env/bin/activate
+
+After activating the environment, observe if the env is activated or not
+$ which python
+You can see the python binary from the newly created virtual environment
+
+$ pip list
+$ pip install requests
+$ pip install pytz
+$ pip list
+$ pip freeze
+The output of this command copy and paste it to the requirements.txt file
+
+-- Deactivate the environment --
+$ decativate
+
+-- Delete the environment --
+Delete the project_env directory, the environment will be deleted
+$ rm -rf project_env
+
+
+-- As we have the requirements.txt file --
+We will create a new project with new venv and use the following command install our packages from the old env use the requirements.txt file
+
+Create a new directory
+$ mkdir my_project
+
+Create a virtual environment
+$ python3 -m venv my_project/venv
+
+Activate the venv
+$ source my_project/venv/bin/activate
+
+Install packages using requirements.txt
+$ pip install -r requirements.txt
+
+$ pip list
+
+$ deactivate
+
+$ pip list
+And observe the diff from the above pip list
+
+What if we want all the packages that are available in our global python then we can use the following command
+$ python3 -m venv my_project/venv --system-site-packages
+$ source my_project/venv/bin/activate
+$ pip list
+$ 
