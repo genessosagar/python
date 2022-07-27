@@ -1,0 +1,10 @@
+This file
+is used
+for testing
+the subprocess
+module to
+capture the 
+output of
+a one command
+to another
+command
