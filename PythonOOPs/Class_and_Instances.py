@@ -4,14 +4,22 @@
 # Instance of a class - 
 
 class Employee:
+    num_of_emp = 0
+    raise_amount =  1.04
     def __init__(self, first, last, pay):       # This __init__ is initialise or constructor
         self.first = first
         self.last = last
         self.email = self.first + '.' + self.last + '@abc.com'
         self.pay = pay
-    
+
+        Employee.num_of_emp += 1
+
     def fullname(self):
         return '{} {}'.format(self.first, self.last)
+    
+    def apply_raise(self):
+        # self.pay = int(self.pay * Employee.raise_amount)
+        self.pay = int(self.pay * self.raise_amount)    # This is good and recommended
 
 # emp_1 and emp_2 are the instance of class Employee
 emp_1 = Employee('Sagar', 'Gadda', 5000)
@@ -41,3 +49,28 @@ print(emp_1.fullname())
 print(emp_2.fullname())
 print(Employee.fullname(emp_1))
 print(Employee.fullname(emp_2))
+
+print(emp_1.pay)
+emp_1.apply_raise()
+print(emp_1.pay)
+
+# We can access class variables from both class itself and instance as well
+print(Employee.raise_amount)
+print(emp_1.raise_amount)
+print(emp_2.raise_amount)
+
+# print(Employee.__dict__)
+# print(emp_1.__dict__)
+
+Employee.raise_amount = 1.05
+print(Employee.raise_amount)
+print(emp_1.raise_amount)
+print(emp_2.raise_amount)
+
+print('*'*50)
+emp_1.raise_amount = 1.06
+print(Employee.raise_amount)
+print(emp_1.raise_amount)
+print(emp_2.raise_amount)
+print('*'*50)
+print(Employee.num_of_emp)
