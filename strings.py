@@ -11,6 +11,7 @@ message2 = "Sagar's World"      # Use double quotes if we have single quote used
 my_message = """This is the multi line string
 I am learning Python
 These python files will be uploaded to Github for my reference"""
+print(my_message)
 
 # Length of a string
 print(len(message))
@@ -18,6 +19,8 @@ print(len(message))
 # Indexing of a string
 print(message[0])
 print(message[10])
+print(message.index('H'))   # Prints the first index of the given character
+print(message.find('H'))    # Prints the first index of the given character
 print('*'*50)
 i = 0
 j = len(message)
@@ -29,6 +32,12 @@ print('*'*50)
 print(message[0:5])
 print(message[:5])
 print(message[6:])
+print(message[0:12:1])
+print(message[0:12:2])
+
+#To print reverse this is an example for Hello World
+print(message[-1::-1])
+print(message[-1:-13:-1])
 
 # String Methods
 print(message)
@@ -44,14 +53,14 @@ print(message)
 print(new_message)
 
 greeting = 'Hello'
-name = 'Sagar'
+name = ' Sagar'
 
 greet_message = greeting + name
 print(greet_message)
 greet_message = greeting + ', ' + name + '. Welcome!'
 print(greet_message)
 
-# String Formatting
+# String Formatting - Place holders
 greet_message = '{}, {}. Welcome!'.format(greeting, name)
 print(greet_message)
 
