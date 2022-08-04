@@ -1,3 +1,7 @@
+print("Hello World")
+print('Hello World')
+print("Hello \nWorld")
+print("Hello \\nWorld")
 message = 'Hello World'
 print(message)
 message1 = 'Sagar\'s World'     # Use Backslash not to read the 's single quote as end of the string
