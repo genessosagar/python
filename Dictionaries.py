@@ -3,7 +3,10 @@ from unicodedata import name
 
 
 student = {'name': 'Sagar', 'age': 18, 'courses': ['Maths', 'Physics', 'Chemistry']}
+dict_1 = {1: 'abc', 2: 'def', 4:'ghi'}
+print(dict_1[4])
 print(student)
+print(type(student))
 print(student['name'])
 print(student['age'])
 print(student['courses'])
@@ -11,7 +14,7 @@ print(student['courses'][1])
 print(student['courses'][2])
 print(student['courses'][0])
 
-#print(student['phone'])        # Error This will give an error
+# print(student['phone'])        # Error This will give an error
 print(student.get('phone'))     # This will print none
 print(student.get('name'))
 print(student.get('phone', 'Not Found'))

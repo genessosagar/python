@@ -5,6 +5,8 @@ num1 = 3
 num2 = 3.14
 print(type(num1))
 print(type(num2))
+print(int(num2))
+print(float(num1))
 
 # Arithmetic Operators
 # Addition +
@@ -31,9 +33,11 @@ print(num)
 num = num + 1
 print(num)
 
+num = 1
 num += 1
 print(num)
 
+num = 2
 num *= 10
 print(num)
 

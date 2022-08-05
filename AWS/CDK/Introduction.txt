@@ -1,0 +1,17 @@
+Install CDK
+
+$ cdk version
+$ cdk help
+$ cdk init sample-app --language python
+
+$ cdk synth
+Takes the local code and compiles into the cloudformation template
+
+$ cdk bootstrap aws://AccountId/eu-west-2
+
+After bootstrap to eu-west-2 region, whenever we use cdk deploy it was by default taking us-east-1 region.
+For this reason the cdk deploy was not creating any resources
+So first do cdk diff and cdk deploy worked
+
+$ cdk diff
+$ cdk deploy

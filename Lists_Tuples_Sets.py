@@ -1,3 +1,5 @@
+sample_list = ['abc', 123, 'def', ['test', 'nest', 456], 'sagar', 890]
+print(sample_list)
 names = ['Sagar', 'Honey', 'Neera', 'Sitara']
 courses = ['Telugu', 'English', 'Hindi', 'Maths', 'Physics', 'Social']
 languages = ['Python', 'Java', 'NodeJS', 'C', 'Go']
@@ -11,9 +13,13 @@ print(len(courses))
 print(languages)
 print(len(languages))
 print(languages[-1])
+print(languages[-1::-1])
 
 # Append Method to a list will append a value at the end of the list
 courses.append('Biology')
+print(courses)
+
+courses = courses + ['Civics']
 print(courses)
 
 # Insert method will help to insert a new value to the desired position in the list, it takes two arguments
@@ -23,9 +29,11 @@ print(courses)
 # Extend method - Multiple values we want to add to a list
 Teachers = ['abc', 'def', 'ghi', 'jkl']
 Students = ['MNO', 'PQR', 'STU']
-# Teachers.insert(0, Students)
-# print(Teachers)
-# print(Teachers[0][1])
+Teachers.insert(0, Students)
+print(Teachers)
+print(Teachers[0])
+print(Teachers[0][1])
+print(Teachers[1])
 Teachers.extend(Students)
 print(Teachers)
 Teachers.remove('STU')
@@ -64,17 +72,21 @@ print(sum(nums))
 # Find Index
 print(courses)
 print(courses.index('Physics'))
-#print(courses.index('Art')) # Value error
+# print(courses.index('Art')) # Value error
 
 # Check if the value is in our list or not - use in
 print('Arts' in courses)
+print('Arts' not in courses)
 print('Maths' in courses)
 
 for item in courses:
     print(item)
 
+for i in courses:
+    print(i)
+
 # To access the index and value in the list then we use the enumerate function
-for index, item in enumerate(courses):
+for index, item in enumerate(courses):  # Here index and item are user defined variables
     print(index, item) 
 
 print("Start the index from 1 instead of 0")
@@ -84,11 +96,12 @@ for index, item in enumerate(courses, start=1):
 # Convert the list of values into a comma separated string or - string
 course_str = ', '.join(courses)
 print(course_str)
+print(type(course_str))
 course_str = ' - '.join(courses)
 print(course_str)
 new_list = course_str.split(' - ')
 print(new_list)
-
+print(type(new_list))
 
 
 # TUPLES - Immutable - Lists are mutable
@@ -98,7 +111,7 @@ print("Tuples as example")
 print(tuple_1)
 print(tuple_2)
 
-#tuple_1[0] = 'Arts'
+# tuple_1[0] = 'Arts'
 # Any mehtod which is trying to mutate the value of a tuple, will not work on tuple unlike list
 
 
