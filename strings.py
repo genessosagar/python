@@ -6,6 +6,8 @@ message = 'Hello World'
 print(message)
 message1 = 'Sagar\'s World'     # Use Backslash not to read the 's single quote as end of the string
 message2 = "Sagar's World"      # Use double quotes if we have single quote used in the string
+print(message1)
+print(message2)
 
 # Multi Line strings - ''' or """
 my_message = """This is the multi line string
@@ -37,7 +39,11 @@ print(message[0:12:2])
 
 #To print reverse this is an example for Hello World
 print(message[-1::-1])
-print(message[-1:-13:-1])
+print(message[10::-1])
+print(message[-1:-12:-1])
+
+# Note: All datatypes in python are classes
+# Functions defined inside a class is called Method
 
 # String Methods
 print(message)
@@ -68,5 +74,5 @@ print(greet_message)
 greet_message = f'{greeting}, {name.upper()}. Welcome!'
 print(greet_message)
 
-print(dir(name))        # Shows all the variables or methods access to that name variable
+print(dir(str))        # Shows all the variables or methods access to that name variable
 print(help(str.lower))        # More information about the string - help / manual for string

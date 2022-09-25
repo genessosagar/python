@@ -2,8 +2,16 @@
 from unicodedata import name
 
 
-student = {'name': 'Sagar', 'age': 18, 'courses': ['Maths', 'Physics', 'Chemistry']}
-dict_1 = {1: 'abc', 2: 'def', 4:'ghi'}
+student = {
+    'name': 'Sagar', 
+    'age': 18, 
+    'courses': ['Maths', 'Physics', 'Chemistry']
+}
+dict_1 = {
+    1: 'abc', 
+    2: 'def', 
+    4: 'ghi'
+}
 print(dict_1[4])
 print(student)
 print(type(student))
@@ -33,6 +41,8 @@ del student['phone']
 print(student)
 
 # pop - can be used to delete the key and it returns the deleted value
+# print(student.pop('age'))
+print(student)
 age = student.pop('age')
 print(student)
 print(age)
@@ -46,6 +56,7 @@ print(student.keys())
 print(student.values())
 print(student.items())
 
+print('Test')
 for key in student:
     print(key)
 

@@ -8,6 +8,7 @@ print(len(names))
 print(names[0])
 print(names[1])
 print(names[0:4])
+#print(names[5])  # Index Error
 print(courses)
 print(len(courses))
 print(languages)
@@ -38,6 +39,8 @@ Teachers.extend(Students)
 print(Teachers)
 Teachers.remove('STU')
 print(Teachers)
+Teachers[0].remove('STU')
+print(Teachers)
 popped = Teachers.pop()  # By default removes the last value of the list
 print(popped)
 print(Teachers)
@@ -62,9 +65,10 @@ print(nums)
 
 # Sorted Function will not sort and store in the same variable we have to store them in the variable
 sorted_nums = sorted(nums)
+print(nums)
 print(sorted_nums)
 
-# Min, Max and Sum
+# Min, Max and Sum these are functions
 print(min(nums))
 print(max(nums))
 print(sum(nums))
@@ -99,7 +103,7 @@ print(course_str)
 print(type(course_str))
 course_str = ' - '.join(courses)
 print(course_str)
-new_list = course_str.split(' - ')
+new_list = course_str.split(' , ')
 print(new_list)
 print(type(new_list))
 
