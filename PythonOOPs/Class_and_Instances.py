@@ -134,3 +134,68 @@
 # e1.new_pay()
 # print(emp.num_emp)
 
+# Niharika
+class emp:
+    raise_amt = 1.05
+    def __init__(self,name,pay):
+        self.name = name
+        self.pay  = pay
+
+    def new_pay(self):
+        self.pay = self.pay * self.raise_amt    
+
+emp1 = emp('niha', 100)
+
+
+class dev(emp):
+    # pass
+    raise_amt = 1.1
+    def __init__(self,name,pay,id):
+        # super().__init__(name,pay)
+        emp.__init__(self,name,pay)
+        self.id = id
+    
+dev1 = dev('honey', 1000,1)
+
+class manager(emp):
+    def __init__(self,name,pay,staff=None):
+        super().__init__(name,pay)
+        if staff is None:
+            self.staff = []
+        else:
+            self.staff = staff    
+    def add_emp(self,person):
+        if person not in self.staff:
+            self.staff.append(person) 
+    def rem_emp(self,person):
+        if person in self.staff:
+            self.staff.remove(person)
+    def list_emp(self):
+        if self.staff == []:
+            print(self.name , 'No staff')
+        else:    
+            for person in self.staff:
+                print(self.name, person.name)
+man1 = manager('HR',900,[dev1])
+
+man2 = manager('Admin',500,[emp1])
+
+# print(help(person))
+# man1.list_emp()
+# man1.add_emp(emp1)
+man2.rem_emp(emp1)
+man1.list_emp()
+man2.list_emp()
+
+# print(man1.name,man1.staff)
+# print(man2.name,man2.staff)
+# print(dev1.name)
+# print(dev1.id)
+# print(dev1.pay)
+# dev1.new_pay()
+# print(dev1.pay)
+# print(emp1.pay)
+# emp1.new_pay()
+# print(emp1.pay)
+# # print(help(dev))
+
